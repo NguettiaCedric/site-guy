@@ -1,28 +1,35 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/images/logo/logo.svg";
+// import logo from "../assets/images/logo/logo.svg";
+import logo1 from '../assets/images/logo/logo.jpeg';
 
 const menus = [
+  // {
+  //   id: 1,
+  //   title: "Homedddd",
+  //   link: "/home",
+  //   submenu: [
+  //     {
+  //       id: 11,
+  //       title: "Home One",
+  //       link: "/",
+  //     },
+  //     {
+  //       id: 12,
+  //       title: "Home Two",
+  //       link: "/home-two",
+  //     },
+  //   ],
+  // },
   {
     id: 1,
-    title: "Home",
-    link: "/home",
-    submenu: [
-      {
-        id: 11,
-        title: "Home One",
-        link: "/",
-      },
-      {
-        id: 12,
-        title: "Home Two",
-        link: "/home-two",
-      },
-    ],
+    title: "Accueil",
+    link: "/",
   },
+  ,
   {
     id: 2,
-    title: "About",
+    title: "A propos",
     link: "/about",
   },
   {
@@ -32,49 +39,79 @@ const menus = [
     submenu: [
       {
         id: 31,
-        title: "Service Single",
-        link: "/services",
+        title: "Cloud & Hebergement",
+        link: "/cloud-hebergement",
       },
       {
         id: 32,
-        title: "Services Details",
-        link: "/service-details",
+        title: "Sauvegarde & Restauration",
+        link: "/sauvegarde-restauration",
+      },
+      {
+        id: 33,
+        title: "Supervision & Monitoring",
+        link: "/supervision-monitoring",
+      },
+      {
+        id: 34,
+        title: "Cybersecurité",
+        link: "/cybersecurite",
+      },
+      {
+        id: 35,
+        title: "Développement web & mobile",
+        link: "/developpement-web-mobile",
       },
     ],
   },
   {
     id: 4,
-    title: "Projects",
+    title: "Solutions",
     link: "#",
     submenu: [
       {
         id: 41,
-        title: "Projects Single",
-        link: "/projects",
+        title: "SAP Business One",
+        link: "/sap-business-one",
       },
       {
         id: 42,
-        title: "Project Details",
-        link: "/project-details",
+        title: "Microsoft Azure",
+        link: "/microsoft-azure",
+      },
+      {
+        id: 43,
+        title: "VEEAM",
+        link: "/veeam",
+      },
+      {
+        id: 43,
+        title: "DLP",
+        link: "/dlp",
       },
     ],
   },
+  // {
+  //   id: 5,
+  //   title: "Blog",
+  //   link: "#",
+  //   submenu: [
+  //     {
+  //       id: 51,
+  //       title: "Blog Single",
+  //       link: "/blog",
+  //     },
+  //     {
+  //       id: 52,
+  //       title: "Blog Details",
+  //       link: "/blog-details",
+  //     },
+  //   ],
+  // },
   {
     id: 5,
-    title: "Blog",
-    link: "#",
-    submenu: [
-      {
-        id: 51,
-        title: "Blog Single",
-        link: "/blog",
-      },
-      {
-        id: 52,
-        title: "Blog Details",
-        link: "/blog-details",
-      },
-    ],
+    title: "Projets",
+    link: "/projets",
   },
   {
     id: 6,
@@ -110,7 +147,7 @@ const MobileMenu = () => {
           <div className="d-flex justify-content-between align-items-center">
             <div className="logo">
               <Link to="/">
-                <img src={logo} alt="logo" />
+                <img src={logo1} alt="logo"  style={{ width: "80px", height: "auto" }}/>
               </Link>
             </div>
             <div className="bars" onClick={toggleMenu}>
@@ -130,7 +167,7 @@ const MobileMenu = () => {
       <div className={`mobile-menu-main ${isMenuOpen ? "active" : ""}`}>
         <div className="logo">
           <Link to="/">
-            <img src={logo} alt="logo" />
+            <img src={logo1} alt="logo" style={{ width: "80px", height: "auto" }} />
           </Link>
         </div>
         <div className="close-mobile-menu" onClick={closeMenu}>
@@ -183,8 +220,8 @@ const MobileMenu = () => {
               <i className="fa-solid fa-phone"></i>
             </span>
             <div className="info">
-              <span className="title">Need help?</span>
-              <h5 className="number">+123 456 7890</h5>
+              <span className="title">Besoin d'aide?</span>
+              <h5 className="number">+225 00 00 00 00 00</h5>
             </div>
           </a>
         </div>
